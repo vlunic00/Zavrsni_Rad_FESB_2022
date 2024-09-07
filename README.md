@@ -6,11 +6,9 @@ It was an idea I came up with, that tested the use of AI in potentially discover
 
 The basic idea behind it was, given values of certian parameters (some relevant to the equation, some not) and the end results, could the model find an equation that would successfully tie those parameters to the result.  
 For more simple equations (in the coded example, the equation for the location of a falling body) a linear regression model was used with great effect.  
-The results are written in a matrix where the values are coeficients who's position in the matrix equals the position of the parameter it's tied to.  
-The parameter matrix is as follows:  
-| '1' | 'initial_position' | 'initial_velocity' | 'mass' | 'time' | 'initial_position^2' | 'initial_position |
-| initial_velocity' | 'initial_position mass' | 'initial_position time' | 'initial_velocity^2' |
-| 'initial_velocity mass' | 'initial_velocity time' | 'mass^2' | 'mass time' | 'time^2' |
+The results are written in a vector where the values are coeficients who's position in the vector equals the position of the parameter it's tied to.  
+The parameter vector is as follows:  
+\['1', 'initial_position', 'initial_velocity', 'mass', 'time', 'initial_position^2', 'initial_position initial_velocity', 'initial_position mass', 'initial_position time', 'initial_velocity^2', 'initial_velocity mass', 'initial_velocity time', 'mass^2', 'mass time', 'time^2']
 
 For more complicated ones such as trygonometric equations (in the coded example, the equation for projectile motion fired at an angle) a symbolic regression model was used, again with great success.
 
